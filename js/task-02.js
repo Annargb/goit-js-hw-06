@@ -10,10 +10,11 @@ const ingredients = [
 const ingradientsListEl = document.querySelector('#ingredients');
 // console.log(ingradientsListEl);
 
-ingredients.forEach(ingredient => {
+const itemList = ingredients.map(ingredient => {
   const item = document.createElement('li');
   item.textContent = ingredient;
   item.classList.add('item');
-  console.log(item);
-  ingradientsListEl.append(item);
+  return item;
 });
+
+ingradientsListEl.append(...itemList);
