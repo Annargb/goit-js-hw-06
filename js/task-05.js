@@ -3,9 +3,13 @@ const input = document.querySelector('#name-input');
 const output = document.querySelector('#name-output');
 
 const changeOutput = event => {
-  output.textContent = event.currentTarget.value;
-  if (!event.currentTarget.value.length) {
+  if (
+    !event.currentTarget.value.length ||
+    event.currentTarget.value.trim() === ''
+  ) {
     output.textContent = 'Anonymous';
+  } else {
+    output.textContent = event.currentTarget.value;
   }
 };
 
