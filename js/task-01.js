@@ -15,3 +15,9 @@ itemEl.forEach(item => {
   const listItemEl = item.querySelector('ul');
   console.log(`Elements: ${listItemEl.children.length}`);
 });
+
+// const list = document.querySelector('#categories');
+// [...list.children].forEach(item => {
+// item.firstElementChild;
+// item.lastElementChild
+// })
